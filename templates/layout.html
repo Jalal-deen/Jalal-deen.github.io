@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewproductst" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="">
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/static/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<title>Jalaldeen</title>
+</head>
+<body>
+
+	
+<!-- HEADER =============================-->
+<header class="item header margin-top-0">
+<div class="wrapper">
+	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+			<i class="fa fa-bars"></i>
+			<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a href="/" class="navbar-brand brand"> <span class="rang">JALAL</span><span class="kala-rang">DEEN</span>  </a>
+		</div>
+		<div id="navbar-collapse-02" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="propClone"><a href="/">Home</a></li>
+				<!-- <li class="propClone"><a href="/shop">Shop</a></li> -->
+				<li class="propClone"><a href="/product">Product</a></li>
+				<li class="propClone"><a href="/checkout">Checkout</a></li>
+				<li class="propClone"><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="text-homeimage">
+					<div class="maintext-image" data-scrollreveal="enter top over 1.5s after 0.1s">
+						 "JALALDEEN SHOPPING"
+					</div>
+					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.3s">
+						 Shop safely and securely online with JALALDEEN
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+
+{% with messages = get_flashed_messages(with_categories=True)     %}
+	{% if messages %}
+    <div class="alert alert-danger">
+		{% for category, message in messages %}
+			{{ message }}
+        {% endfor %}
+    </div>
+	{% endif %}
+	{% endwith %}
+	
+
+
+{% block body %}
+    
+{% endblock  %}
+
+
+
+<div class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<p class="footernote">
+				 Connect with Jalaldeen
+			</p>
+			<ul class="social-iconsfooter">
+				<li><a href="#"><i class="fa fa-phone"></i></a></li>
+				<li><a href="https://www.facebook.com/Jalaldeen1992"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			</ul>
+			<p>
+				 &copy; 2022 Jalaldeen<br/>
+				SW-Codes - A software company <a href="#">SW (Sheikh's World)</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- SCRIPTS =============================-->
+<script src="/static/js/jquery-.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/anim.js"></script>
+<script>
+//----HOVER CAPTION---//	  
+jQuery(document).ready(function ($) {
+	$('.fadeshop').hover(
+		function(){
+			$(this).find('.captionshop').fadeIn(150);
+		},
+		function(){
+			$(this).find('.captionshop').fadeOut(150);
+		}
+	);
+});
+</script>
+	
+</body>
+</html>

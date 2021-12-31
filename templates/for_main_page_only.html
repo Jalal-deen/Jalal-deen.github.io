@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<link rel="stylesheet" href="/static/admin/css">
+
+<h1>Welcome to Dashboard</h1>
+
+
+
+
+<form action="/for_main_page_only" method="POST" class="signin-form" id="contactform" enctype="multipart/form-data">
+    <div class="form-group mb-3">
+        <label class="label" for="name">Title</label>
+        <input type="text" class="form-control" placeholder="Add Title" required name="title">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="label" for="name">Descprition</label>
+       <textarea name="des" id="" cols="20" rows="10" placeholder="Add Description"></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="label" for="name">Price</label>
+        <input type="text" class="form-control" placeholder="Add Price" required name="price">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="label" for="name">Discount</label>
+        <input type="text" class="form-control" placeholder="Discount" required name="discount">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="label" for="name">Image</label>
+        <input type="file" class="form-control" placeholder="Add Image" required name="img">
+    
+    <button type="submit" style="margin-left: 43%; padding: 6px 23px; font-size: 21px;">Add Item</button>
+   
+    
+    </form>
+
+
+
+
+{% endblock  %}

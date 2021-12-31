@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	
+
+<!-- CONTENT =============================-->
+<section class="item content">
+<div class="container toparea">
+	<div class="underlined-title">
+		<div class="editContent">
+			<h1 class="text-center latestitems">{{po.title}}</h1>
+		</div>
+		<div class="wow-hr type_short">
+			<span class="wow-hr-h">
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="productbox">
+				<img src="{{ url_for('static', filename='/images/' + po.filename) }}" alt="Sorry could'nt load image">
+				<div class="clearfix">
+				</div>
+				<br/>
+				<div class="product-details text-left">
+					<p>
+						{{po.description}}
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<a href="/purchase/{{po.id}}" class="btn btn-buynow">RS{{po.price}} - Purchase</a>
+			<div class="properties-box">
+				{{po.description}}
+				<!-- <ul class="unstyle">
+					<li><b class="propertyname">Version:</b> 1.0</li>
+					<li><b class="propertyname">Image Size:</b> 2340x1200</li>
+					<li><b class="propertyname">Files Included:</b> mp3, audio, jpeg, png</li>
+					<li><b class="propertyname">Documentation:</b> Well Documented</li>
+					<li><b class="propertyname">License:</b> GNU</li>
+					<li><b class="propertyname">Requires:</b> Easy Digital Downloads</li>
+					<li><b class="propertyname">Environment:</b> Wordpress</li>
+					<li><b class="propertyname">Any Field Etc:</b> Any Detail</li>
+					<li><b class="propertyname">Number:</b> Up to 20 specifications in this box</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+{% endblock  %}

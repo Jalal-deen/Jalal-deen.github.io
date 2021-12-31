@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+<!-- STEPS =============================-->
+
+	{% block body%}
+		
+	<!-- LATEST ITEMS =============================-->
+	<section class="item content">
+	<div class="container">
+		<div class="underlined-title">
+			<div class="editContent">
+				<h1 class="text-center latestitems">LATEST ITEMS</h1>
+			</div>
+			<div class="wow-hr type_short">
+				<span class="wow-hr-h">
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				</span>
+			</div>
+		</div>
+		{% for i in products %}	
+		<div class="row">
+			<div class="col-md-4">
+				<div class="productbox">
+					<div class="fadeshop">
+						<div class="captionshop text-center" style="display: none;">
+							<h3>{{i.title}}</h3>
+							<p>
+								 
+							</p>
+							<p>
+								<a href="/shop/{{i.id}}" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
+								<a href="/shop/{{i.id}}" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+							</p>
+						</div>
+						
+						<span class="maxproduct"><img src="{{ url_for('static', filename='/images/' + i.filename) }}" alt="Sorry Could'nt load image"></span>
+					</div>
+					<div class="product-details">
+						<a href="#">
+							<h1>{{i.title}}</h1>
+						</a>
+						<span class="price">
+							<span class="edd_price">RS {{i.price}}</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			{% endfor %}
+			
+
+<!-- BUTTON =============================-->
+<div class="item content">
+	<div class="container text-center">
+		<a href="/product" class="homebrowseitems">Browse All Products
+		<div class="homebrowseitemsicon">
+			<i class="fa fa-star fa-spin"></i>
+		</div>
+		</a>
+	</div>
+</div>
+<br/>
+
+
+<!-- AREA =============================-->
+
+
+<!-- TESTIMONIAL =============================-->
+<div class="item content">
+	<div class="container">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="slide-text">
+				<div>
+					<h2><span class="uppercase">Jalaldeen TechSupport</span></h2>
+					<img src="http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png" alt="Awesome Supproductst">
+					<p>
+						<strong>
+						Dear Customers! We know that today many of people sell fake items online, but we are selling the best products. We accept cash on delivery only, and you are allowed to open and check your product when recevied. Then you can pay. That's how we make are trust to our customer. Thanks for shopping from Jalaldeen. 
+					</strong>
+					</p>
+					<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{%endblock%}
